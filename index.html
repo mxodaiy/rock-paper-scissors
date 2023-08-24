@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>RPS Game</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="background"></div>
+    <div id="foreground">
+        <h1>
+            <div>Rock</div>
+            <div>Paper</div>
+            <div>Scissors</div>
+        </h1>
+        <div id="playGround">
+            <div id="initialization">
+                <label for="nRounds">Number of play rounds</label>
+                <input
+                    id="nRounds"
+                    type="number"
+                    name="nRounds"
+                    step="1"
+                    min="0"
+                    max="40"
+                    placeholder="1"
+                    required />
+                <input id="play" type="submit" value="New Game"/>          
+            </div>
+            <div class="player">
+                <button><img class='hand rock'     src="./img/rock.svg"     alt="rock hand"></button>
+                <button><img class='hand paper'    src="./img/paper.svg"    alt="paper hand"></button>
+                <button><img class='hand scissors' src="./img/scissors.svg" alt="scissors hand"></button>
+            </div>
+            <div class="machine">
+                <img class='hand rock'     src="./img/rock.svg"     alt="rock hand"></button>
+                <img class='hand paper'    src="./img/paper.svg"    alt="paper hand"></button>
+                <img class='hand scissors' src="./img/scissors.svg" alt="scissors hand"></button>
+            </div>
+        </div>
+        <div id="result">
+            <div class="player">Player<div class="score"></div></div>
+            <div class="draw">Draw<div class="score"></div></div>
+            <div class="machine">Machine<div class="score"></div></div>
+        </div>
+    </div>
 </body>
 </html>
