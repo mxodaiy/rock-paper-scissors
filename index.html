@@ -15,20 +15,20 @@
             <div>Paper</div>
             <div>Scissors</div>
         </h1>
+        <div id="initialization">
+            <label for="nRounds">Number of play rounds</label>
+            <input
+                id="nRounds"
+                type="number"
+                name="nRounds"
+                step="1"
+                min="0"
+                max="40"
+                value="5"
+                required />
+            <input id="play" type="submit" value="New Game"/>          
+        </div>
         <div id="playGround">
-            <div id="initialization">
-                <label for="nRounds">Number of play rounds</label>
-                <input
-                    id="nRounds"
-                    type="number"
-                    name="nRounds"
-                    step="1"
-                    min="0"
-                    max="40"
-                    placeholder="1"
-                    required />
-                <input id="play" type="submit" value="New Game"/>          
-            </div>
             <div class="player">
                 <button><img class='hand rock'     src="./img/rock.svg"     alt="rock hand"></button>
                 <button><img class='hand paper'    src="./img/paper.svg"    alt="paper hand"></button>
@@ -39,9 +39,14 @@
                 <img class='hand paper'    src="./img/paper.svg"    alt="paper hand"></button>
                 <img class='hand scissors' src="./img/scissors.svg" alt="scissors hand"></button>
             </div>
+            <div id="battleField">
+                <img class='player'  alt="player >"></button>
+                <img class='machine' alt="< machine"></button>
+            </div>
         </div>
+        <div id="history"></div>
         <div id="result">
-            <div class="player">Player<div class="score"></div></div>
+            <div class="player">Player &nbsp &nbsp<div class="score"></div></div>
             <div class="draw">Draw<div class="score"></div></div>
             <div class="machine">Machine<div class="score"></div></div>
         </div>
